@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090e0d">
+  <title>MotorAI | Intelligent Motor Monitoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <nav class="nav wrap">
+    <a class="brand" href="#home"><span class="brand-mark">M</span><span>Motor<span class="accent">AI</span></span></a>
+    <div class="nav-links"><a href="#overview">Overview</a><a href="#system">System</a><a href="#workflow">How it works</a><a href="#future">Future scope</a></div>
+    <a class="nav-cta" href="#system">Explore project <span>↗</span></a>
+  </nav>
+
+  <main id="home" class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> SMART CONDITION MONITORING</div>
+        <h1>Know your motor.<br><span class="gradient-text">Before it fails.</span></h1>
+        <p class="lead">MotorAI is an IoT-enabled motor condition monitoring prototype that brings temperature sensing, vibration analysis and AI-assisted insights into one simple interface.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#overview">Discover MotorAI <span>↘</span></a><a class="text-btn" href="#workflow">See how it works <span>→</span></a></div>
+        <div class="hero-meta"><div><strong>02</strong><span>Sensor inputs</span></div><i></i><div><strong>01</strong><span>Unified dashboard</span></div><i></i><div><strong>AI</strong><span>Predictive insights</span></div></div>
+      </div>
+      <div class="dashboard-preview">
+        <div class="preview-top"><div><span class="tiny-label">MOTORAI / LIVE OVERVIEW</span><h3>Motor health monitor</h3></div><span class="live-pill"><b></b> SYSTEM ONLINE*</span></div>
+        <div class="preview-grid">
+          <article class="metric-card"><div class="metric-head"><span>Winding temperature</span><span class="metric-icon">⌁</span></div><div class="metric-value">26.8<span>°C</span></div><div class="metric-foot"><span class="dot-green"></span> Temperature sensor</div><div class="mini-line"><span></span></div></article>
+          <article class="metric-card"><div class="metric-head"><span>Vibration level</span><span class="metric-icon">〰</span></div><div class="metric-value">0.006<span>g RMS</span></div><div class="metric-foot"><span class="dot-green"></span> Motion sensor</div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        </div>
+        <article class="forecast-card"><div class="forecast-head"><div><span class="tiny-label">AI-ASSISTED ANALYSIS</span><h3>Temperature trend</h3></div><span class="forecast-tag">MODEL INSIGHT</span></div><div class="forecast-body"><div><strong>Early heat</strong><p>Observe temperature behaviour over time to identify unusual rising trends.</p></div><div class="forecast-graphic"><svg viewBox="0 0 220 78" role="img" aria-label="Illustrative rising temperature trend"><path d="M2 62 C25 58 34 51 55 55 S88 37 108 43 S143 24 163 31 S194 12 218 8" fill="none" stroke="#8de5ad" stroke-width="2.5" stroke-linecap="round"/><path d="M2 62 C25 58 34 51 55 55 S88 37 108 43 S143 24 163 31 S194 12 218 8 L218 78 L2 78Z" fill="url(#g)" opacity=".18"/><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8de5ad"/><stop offset="1" stop-color="#8de5ad" stop-opacity="0"/></linearGradient></defs></svg><span>Illustrative trend</span></div></div></article>
+        <div class="preview-bottom"><span><b class="dot-green"></b> Sensor data visualization</span><span>*Demo interface preview</span></div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="section-heading"><div><span class="eyebrow">01 / PROJECT OVERVIEW</span><h2>Make motor health <span class="accent">visible.</span></h2></div><p>MotorAI focuses on two important condition indicators—temperature and vibration—to help observe motor behaviour and support early fault awareness.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-symbol">◉</div><h3>Temperature monitoring</h3><p>Tracks motor temperature through a DS18B20 digital temperature sensor.</p><span class="feature-foot">DS18B20 / TEMPERATURE</span></article>
+        <article class="feature-card"><span class="feature-number">02</span><div class="feature-symbol">〰</div><h3>Vibration monitoring</h3><p>Uses MPU6050 motion data to observe vibration behaviour and changes.</p><span class="feature-foot">MPU6050 / ACCELERATION</span></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-symbol">✳</div><h3>AI-assisted insights</h3><p>Explores temperature patterns to estimate near-term trends and flag unusual heating behaviour.</p><span class="feature-foot">DATA ANALYSIS / FORECASTING</span></article>
+      </div>
+    </section>
+
+    <section id="system" class="section system-section">
+      <div class="section-heading"><div><span class="eyebrow">02 / SYSTEM ARCHITECTURE</span><h2>From sensor to <span class="accent">insight.</span></h2></div><p>A compact sensing setup collects motor-condition data and sends it to a computer-based backend for storage, visualization and analysis.</p></div>
+      <div class="architecture">
+        <div class="arch-node"><span class="arch-icon">⌁</span><b>DS18B20</b><small>Temperature</small></div><div class="arch-plus">+</div>
+        <div class="arch-node"><span class="arch-icon">〰</span><b>MPU6050</b><small>Vibration / motion</small></div><div class="arch-arrow">→</div>
+        <div class="arch-node highlight-node"><span class="arch-icon">▣</span><b>Raspberry Pi Pico W</b><small>Data acquisition + Wi-Fi</small></div><div class="arch-arrow">→</div>
+        <div class="arch-node"><span class="arch-icon">▤</span><b>Backend</b><small>API + data storage</small></div><div class="arch-arrow">→</div>
+        <div class="arch-node"><span class="arch-icon">◫</span><b>Dashboard + AI</b><small>Visualization + analysis</small></div>
+      </div>
+      <div class="note"><span>i</span><p><strong>Prototype note:</strong> The website is a project overview, not a live telemetry page. Values shown in the hero dashboard are illustrative examples, not a live motor connection.</p></div>
+    </section>
+
+    <section id="workflow" class="section">
+      <div class="section-heading"><div><span class="eyebrow">03 / WORKFLOW</span><h2>How MotorAI <span class="accent">works.</span></h2></div><p>The system follows a simple data pipeline, from physical sensing to readable information.</p></div>
+      <div class="steps">
+        <div class="step"><span>01</span><div><h3>Sense</h3><p>DS18B20 measures temperature while MPU6050 captures acceleration data related to vibration.</p></div></div>
+        <div class="step"><span>02</span><div><h3>Process</h3><p>Raspberry Pi Pico W reads the sensors and prepares the measurements for transmission.</p></div></div>
+        <div class="step"><span>03</span><div><h3>Visualize</h3><p>The backend receives and stores readings, which are presented through a monitoring dashboard.</p></div></div>
+        <div class="step"><span>04</span><div><h3>Analyze</h3><p>AI-based analysis explores historical temperature behaviour and provides experimental trend forecasts.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section objectives">
+      <div><span class="eyebrow">04 / PROJECT GOALS</span><h2>Built around <span class="accent">awareness.</span></h2></div>
+      <div class="goal-list"><p><span>↗</span> Monitor motor temperature continuously.</p><p><span>↗</span> Observe vibration patterns and changes.</p><p><span>↗</span> Maintain historical sensor readings.</p><p><span>↗</span> Explore early-warning insights using data analysis.</p><p><span>↗</span> Present key information through a clear dashboard.</p></div>
+    </section>
+
+    <section id="future" class="future-card">
+      <div><span class="eyebrow">05 / WHAT'S NEXT</span><h2>Moving towards<br><span class="gradient-text">predictive maintenance.</span></h2><p>Future development can include testing under different motor loads, collecting a larger real-motor dataset, improving anomaly detection and validating model performance under practical operating conditions.</p></div>
+      <div class="future-mark">M<span>AI</span></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#home"><span class="brand-mark">M</span><span>Motor<span class="accent">AI</span></span></a><span>Intelligent motor condition monitoring prototype</span><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
